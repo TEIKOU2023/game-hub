@@ -28,7 +28,7 @@ const PlatformIconList = ({ platforms }: Props) => {
 
 export default PlatformIconList;
 const PlatformIcon = ({ platformId }: { platformId: string }) => {
-  const iconStyle = { opacity: 0.5 }; // 设置图标透明度
+  const iconStyle = { opacity: 0.5 };
 
   switch (platformId) {
     case "pc":
