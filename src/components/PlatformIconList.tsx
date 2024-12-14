@@ -32,13 +32,13 @@ const PlatformIcon = ({ platformId }: { platformId: string }) => {
 
   switch (platformId) {
     case "pc":
-      return <FaWindows style={iconStyle} />;
+      return <FaWindows style={iconStyle}/>;
     case "playstation":
       return <FaPlaystation style={iconStyle} />;
     case "xbox":
       return <FaXbox style={iconStyle} />;
     case "nintendo":
-      return <SiNintendo style={iconStyle} />;
+      return <SiNintendo style={iconStyle} size={50}/>;
     case "mac":
       return <FaApple style={iconStyle} />;
     case "linux":
