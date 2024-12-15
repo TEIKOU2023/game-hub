@@ -7,6 +7,7 @@ import {
   MenuRoot,
   MenuTrigger,
 } from "@chakra-ui/react";
+import { HiSortAscending } from "react-icons/hi";
 
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
@@ -21,6 +22,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
     <MenuRoot>
       <MenuTrigger asChild>
         <Button variant="outline" size="sm">
+          <HiSortAscending />
           {selectedPlatform?.name || "Platforms"}
         </Button>
       </MenuTrigger>
