@@ -32,7 +32,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
           Order by: {currentSortOrder?.label || 'Relevance'}
         </Button>
       </MenuTrigger>
-      <MenuContent>
+      <MenuContent minW="10rem">
         {sortOrders.map((order) => (
           <MenuItem
             onClick={() => onSelectSortOrder(order.value)}

@@ -3,7 +3,8 @@ import usePlatforms from "@/hooks/usePlatform";
 import {
   Button,
   MenuContent,
-  MenuItem,
+  MenuRadioItem,
+  MenuRadioItemGroup,
   MenuRoot,
   MenuTrigger,
 } from "@chakra-ui/react";
@@ -26,15 +27,17 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
           {selectedPlatform?.name || "Platforms"}
         </Button>
       </MenuTrigger>
-      <MenuContent>
+      <MenuContent minW="10rem">
         {data.map((platform) => (
-          <MenuItem
-            onClick={() => onSelectPlatform(platform)}
-            value={platform.name}
-            key={platform.id}
-          >
-            {platform.name}
-          </MenuItem>
+          <MenuRadioItemGroup>
+            <MenuRadioItem
+              onClick={() => onSelectPlatform(platform)}
+              value={platform.name}
+              key={platform.id}
+            >
+              {platform.name}
+            </MenuRadioItem>
+          </MenuRadioItemGroup>
         ))}
       </MenuContent>
     </MenuRoot>
